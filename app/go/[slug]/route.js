@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { redis, LINK_KEY } from '../../../../lib/redis';
+import { redis, LINK_KEY } from '../../../lib/redis';
 
 export async function GET(_req, { params }) {
   const slug = String(params?.slug || '').replace(/[^a-zA-Z0-9_-]/g, '');
